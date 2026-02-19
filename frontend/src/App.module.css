@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleGroup h1 {
+    margin-bottom: 4px;
+}
+
+.description {
+    color: var(--text-secondary);
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.skeletonHint {
+    padding: 40px;
+    border: 1px dashed var(--abc-slate);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}

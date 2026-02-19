@@ -1,0 +1,25 @@
+{
+    "extends": "stylelint-config-standard",
+    "plugins": [
+        "stylelint-declaration-strict-value"
+    ],
+    "rules": {
+        "declaration-strict-value": [
+            [
+                "/color/",
+                "background-color",
+                "border-color"
+            ],
+            {
+                "ignoreValues": [
+                    "transparent",
+                    "inherit",
+                    "currentColor",
+                    "none",
+                    "0"
+                ],
+                "message": "Direct hex or named colors are forbidden. Use brand tokens from theme.css."
+            }
+        ]
+    }
+}

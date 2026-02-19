@@ -1,0 +1,38 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.observe {
+    background: color-mix(in srgb, var(--abc-gold-champagne), transparent 90%);
+    color: var(--abc-gold-champagne);
+    border: 1px solid color-mix(in srgb, var(--abc-gold-champagne), transparent 80%);
+}
+
+.observe .dot {
+    background: var(--abc-gold-champagne);
+}
+
+.live {
+    background: color-mix(in srgb, var(--abc-glow), transparent 90%);
+    color: var(--abc-glow);
+    border: 1px solid color-mix(in srgb, var(--abc-glow), transparent 70%);
+}
+
+.live .dot {
+    background: var(--abc-glow);
+    box-shadow: 0 0 6px var(--abc-glow);
+}

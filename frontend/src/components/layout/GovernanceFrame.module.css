@@ -1,0 +1,142 @@
+.root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--abc-black);
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+/* Observe Mode Frame */
+.observe {
+    border-top: 2px solid var(--abc-gold-champagne);
+}
+
+/* Live Mode Frame */
+.live {
+    border-top: 2px solid transparent;
+    position: relative;
+}
+
+.live::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+            var(--abc-gold),
+            var(--abc-glow),
+            var(--abc-gold));
+    background-size: 200% 100%;
+    animation: shimmer-flow 3s linear infinite;
+    z-index: 100;
+}
+
+@keyframes shimmer-flow {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.header {
+    height: 64px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--abc-slate);
+    background: color-mix(in srgb, var(--abc-black), transparent 20%);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--abc-black);
+    background: var(--abc-gradient-gold);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.companyName {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--abc-gold);
+}
+
+.modeIndicator {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.observeIndicator {
+    background: color-mix(in srgb, var(--abc-gold-champagne), transparent 90%);
+    border: 1px solid var(--abc-gold-champagne);
+    color: var(--abc-gold-champagne);
+}
+
+.liveIndicator {
+    background: var(--abc-glow);
+    color: var(--abc-black);
+    box-shadow: 0 0 12px color-mix(in srgb, var(--abc-glow), transparent 60%);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content {
+    flex: 1;
+    padding: 32px;
+}
+
+.footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--abc-slate);
+    text-align: center;
+}
+
+.governanceNote {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}

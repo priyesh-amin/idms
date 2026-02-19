@@ -1,0 +1,29 @@
+:root {
+  /* Brand Constants - Agile Business Consultancy */
+  --abc-gold: #C9A961;
+  --abc-gold-champagne: #F4E4C1;
+  --abc-glow: #FFD700;
+  --abc-black: #0A0A0A;
+  --abc-charcoal: #1A1A1A;
+  --abc-slate: #2D2D2D;
+  --abc-error: #B3261E;
+  --abc-bronze: #8B7355;
+
+  /* Text Standards */
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+  --text-muted: #7A7A7A;
+
+  /* Shadows / Depth (Elevation System) */
+  --elevation-1: 0 0 0 1px var(--abc-slate);
+  --shadow-black-60: color-mix(in srgb, var(--abc-black) 60%, transparent);
+  --elevation-2: 0 4px 12px var(--shadow-black-60);
+
+  /* Visual Dynamics */
+  --abc-gradient-gold: linear-gradient(135deg, var(--abc-gold) 0%, var(--abc-gold-champagne) 100%);
+  --abc-gradient-dark: radial-gradient(circle, var(--abc-black) 0%, var(--abc-charcoal) 100%);
+
+  /* Governance Semantic Durations */
+  --duration-pulse: 2s;
+  --duration-shimmer: 1.5s;
+}

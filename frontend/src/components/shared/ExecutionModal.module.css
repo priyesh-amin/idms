@@ -1,0 +1,182 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: color-mix(in srgb, black, transparent 15%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    background: var(--abc-charcoal);
+    border: 1px solid var(--abc-slate);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: var(--elevation-2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    padding: 24px;
+    border-bottom: 1px solid var(--abc-slate);
+}
+
+.titleGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.executionId {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.executionId span {
+    color: var(--abc-gold);
+}
+
+.body {
+    padding: 24px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.confirmGroup {
+    margin-top: 20px;
+    padding: 16px;
+    background: color-mix(in srgb, var(--abc-gold), transparent 95%);
+    border: 1px solid color-mix(in srgb, var(--abc-gold), transparent 80%);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.confirmGroup input {
+    cursor: pointer;
+}
+
+.confirmGroup label {
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.manifest {
+    margin-top: 20px;
+    background: var(--abc-black);
+    border: 1px solid var(--abc-slate);
+    border-radius: 4px;
+    padding: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+}
+
+.manifestTitle {
+    color: var(--abc-gold);
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+}
+
+.manifestData {
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.property {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    color: var(--text-muted);
+}
+
+.value {
+    color: var(--text-primary);
+}
+
+.statusSimulated {
+    color: var(--abc-gold);
+}
+
+.modeBadge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: color-mix(in srgb, var(--abc-gold), transparent 80%);
+    color: var(--abc-gold);
+    border: 1px solid var(--abc-gold);
+}
+
+.errorBanner {
+    margin-top: 20px;
+    padding: 12px;
+    background: color-mix(in srgb, var(--abc-error), transparent 90%);
+    border: 1px solid var(--abc-error);
+    border-radius: 4px;
+    color: #FFB4AB;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer {
+    padding: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    background: color-mix(in srgb, white, transparent 98%);
+    border-top: 1px solid var(--abc-slate);
+}
+
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: color-mix(in srgb, var(--abc-black), transparent 30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(2px);
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--abc-slate);
+    border-top-color: var(--abc-gold);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
